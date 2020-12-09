@@ -3,8 +3,9 @@ export default function Header(props) {
     return (
         <header className="header">
             <img src="" alt="Not My Final Forum" />
-            <nav>selection navigation
-            </nav>
+            <form >
+                <input className="header__search" placeholder="Search..." maxLength="50" type="text" />
+            </form>
 
             <AuthButton {...props} />
         </header>

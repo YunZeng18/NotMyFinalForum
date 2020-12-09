@@ -5,6 +5,7 @@ import axios from 'axios';
 import LoginPage from './module/LoginPage';
 import comment from './module/comment';
 import Header from './module/header/header';
+import SideNav from './module/SideNav';
 import Home from './module/Home';
 
 // Authentication server URL
@@ -53,6 +54,7 @@ export default class App extends Component {
         return (
             <BrowserRouter>
                 <Header user={this.state.user} isAuthenticated={this.state.isAuthenticated} onLogin={this.handleLogin} onLogout={this.handleLogout} />
+                <SideNav />
                 <Switch>
                     <Route path="/" component={Home} exact />
                 </Switch>
