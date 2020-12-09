@@ -3,6 +3,7 @@ import { API_URL } from '../App';
 
 class LoginPage extends Component {
   login = () => {
+    console.log(this);
     // Change location to /login server route while sending a redirect url
     // If user is coming from a page different than /, get the page they
     // are coming from, otherwise redirect to / after login

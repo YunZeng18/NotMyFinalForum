@@ -4,8 +4,11 @@ export default class Main extends Component {
     render() {
         return (
             <main>
-                <h1>Forum guideline</h1>
+                <h1>Welcome to Not My Final Forum</h1>
+                <p>see what people are talking about</p>
             </main>
         );
     }
 }
+
+

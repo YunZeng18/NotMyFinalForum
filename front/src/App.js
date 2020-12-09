@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import PrivateRoute from './module/PrivateRoute';
 import axios from 'axios';
 import LoginPage from './module/LoginPage';
 import comment from './module/comment';
 import Header from './module/header/header';
-import Main from './module/main';
+import Home from './module/Home';
 
 // Authentication server URL
 export const API_URL = 'http://localhost:80';
@@ -17,6 +17,7 @@ export default class App extends Component {
             isAuthenticated: false,
             user: null,
         };
+        this.handleLogin = this.handleLogin.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
     }
     componentDidMount() {
@@ -39,11 +40,22 @@ export default class App extends Component {
         const url = `${window.location.protocol}//${window.location.host}`;
         window.location = `${API_URL}/logout?from=${url}`;
     }
+    handleLogin() {
+        console.log(this);
+        // Change location to /login server route while sending a redirect url
+        // If user is coming from a page different than /, get the page they
+        // are coming from, otherwise redirect to / after login
+        const { from } = { from: { pathname: '/' } };
+        const url = `${window.location.protocol}//${window.location.host}${from.pathname}`;
+        window.location = `${API_URL}/login/?from=${url}`;
+    }
     render() {
         return (
             <BrowserRouter>
-                <Header user={this.state.user} isAuthenticated={this.state.isAuthenticated} onLogout={this.handleLogout} />
-                <Main />
+                <Header user={this.state.user} isAuthenticated={this.state.isAuthenticated} onLogin={this.handleLogin} onLogout={this.handleLogout} />
+                <Switch>
+                    <Route path="/" component={Home} exact />
+                </Switch>
 
                 <ul>
                     <li>
