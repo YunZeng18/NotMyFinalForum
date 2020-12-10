@@ -14,12 +14,13 @@ export default class SideNav extends Component {
                     <dd>abc modded</dd>
                     <dd>xyz modded</dd>
                     <dd>asdf</dd>
-                    <dd>+ join a forum</dd>
+                    <dd>browse forums</dd>
                 </dl>
                 <dl>
                     <dt>Messages</dt>
                     <dd>Not My Final Forum Support/Admin</dd>
                     <dd>userxyz</dd>
+                    <dd>+ message another user</dd>
                 </dl>
             </nav>
         );

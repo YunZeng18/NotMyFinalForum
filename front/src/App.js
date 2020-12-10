@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import PrivateRoute from './module/PrivateRoute';
 import axios from 'axios';
 import LoginPage from './module/LoginPage';
-import comment from './module/comment';
+import Comment from './module/comment';
 import Header from './module/header/header';
 import SideNav from './module/SideNav';
 import Home from './module/Home';
@@ -69,7 +69,7 @@ export default class App extends Component {
                 </ul>
                 <Route path="/login" component={LoginPage} />
 
-                <PrivateRoute path="/protected" component={comment} />
+                <PrivateRoute path="/protected" component={Comment} />
             </BrowserRouter>
         );
     }

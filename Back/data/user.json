@@ -1,0 +1,27 @@
+[
+	{
+		"name": "user1",
+		"password": "123",
+		"forum": ["Anime", "Local News", "Cars"]
+	},
+	{
+		"name": "user2",
+		"password": "123",
+		"forum": ["Anime", "Vancouver News"]
+	},
+	{
+		"name": "user3",
+		"password": "123",
+		"forum": []
+	},
+	{
+		"name": "user4",
+		"password": "123",
+		"forum": ["Vancouver News"]
+	},
+	{
+		"name": "user5",
+		"password": "123",
+		"forum": ["Cars"]
+	}
+]
