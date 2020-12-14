@@ -95,3 +95,6 @@ app.use('/', routes);
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}.`);
 });
+
+const user = require('./routes/user');
+app.use('/user', user);

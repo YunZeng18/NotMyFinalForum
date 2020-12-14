@@ -2,7 +2,7 @@
 	{
 		"name": "user1",
 		"password": "123",
-		"forum": ["Anime", "Local News", "Cars"]
+		"forum": ["Anime", "Vancouver News", "Cars"]
 	},
 	{
 		"name": "user2",

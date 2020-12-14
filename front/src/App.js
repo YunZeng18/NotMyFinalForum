@@ -42,6 +42,7 @@ export default class App extends Component {
         console.log(prevProp, prevState, snapshot);
         if (this.state.isAuthenticated) {
             console.log('getuserforums');
+            axios.get(`${API_URL}/user/user1`)
         }
     }
     handleLogout() {
