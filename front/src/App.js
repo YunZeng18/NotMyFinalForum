@@ -17,6 +17,7 @@ export default class App extends Component {
         this.state = {
             isAuthenticated: false,
             user: null,
+            userForums: null
         };
         this.handleLogin = this.handleLogin.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
@@ -37,6 +38,12 @@ export default class App extends Component {
                 });
             });
     }
+    componentDidUpdate(prevProp, prevState, snapshot) {
+        console.log(prevProp, prevState, snapshot);
+        if (this.state.isAuthenticated) {
+            console.log('getuserforums');
+        }
+    }
     handleLogout() {
         const url = `${window.location.protocol}//${window.location.host}`;
         window.location = `${API_URL}/logout?from=${url}`;
@@ -49,6 +56,7 @@ export default class App extends Component {
         const { from } = { from: { pathname: '/' } };
         const url = `${window.location.protocol}//${window.location.host}${from.pathname}`;
         window.location = `${API_URL}/login/?from=${url}`;
+
     }
     render() {
         return (
