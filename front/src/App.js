@@ -7,6 +7,7 @@ import Comment from './module/comment';
 import Header from './module/header/header';
 import SideNav from './module/SideNav';
 import Home from './module/Home';
+import ForumList from './module/forumList';
 
 // Authentication server URL
 export const API_URL = 'http://localhost:80';
@@ -75,18 +76,8 @@ export default class App extends Component {
                 <Switch>
                     <Route path="/" component={Home} exact />
                     <Route path="/login" component={LoginPage} />
+                    <Route path="/forum/list" component={ForumList} />
                 </Switch>
-
-                <ul>
-                    <li>
-
-                    </li>
-                    <li>
-                        <Link to="/protected">Protected Page</Link>
-                    </li>
-                </ul>
-
-
                 <PrivateRoute path="/protected" component={Comment} />
             </BrowserRouter>
         );

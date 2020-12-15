@@ -10,9 +10,9 @@ import './style/index.css';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Switch>
-        <Route path="/" component={App} />
-      </Switch>
+
+      <Route path="/" component={App} />
+
 
     </BrowserRouter>
 

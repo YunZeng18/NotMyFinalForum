@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+.main-margin, .home, .forum-list {
+  margin: 30px 30px 0 210px;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,10 +57,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.home {
-  margin: 30px 0 0 210px;
 }
 
 body {
