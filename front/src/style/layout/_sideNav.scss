@@ -1,0 +1,8 @@
+.side-nav {
+	display: flex;
+	flex-direction: column;
+	&__my-forums {
+		display: flex;
+		flex-direction: column;
+	}
+}

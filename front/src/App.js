@@ -17,7 +17,7 @@ export default class App extends Component {
         this.state = {
             isAuthenticated: false,
             user: null,
-            userForums: null
+            userForum: null
         };
         this.handleLogin = this.handleLogin.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
@@ -40,10 +40,18 @@ export default class App extends Component {
     }
     componentDidUpdate(prevProp, prevState, snapshot) {
         console.log(prevProp, prevState, snapshot);
-        if (this.state.isAuthenticated) {
+        console.log(this);
+
+        console.log(prevState);
+
+        if (this.state.isAuthenticated && prevState.isAuthenticated !== this.state.isAuthenticated) {
             console.log('getuserforums');
             axios.get(`${API_URL}/user/user1`)
+                .then(res => { this.setState({ userForum: res.data[0].forum }) })
+                .catch(error => console.log(error));
         }
+
+
     }
     handleLogout() {
         const url = `${window.location.protocol}//${window.location.host}`;
@@ -63,9 +71,10 @@ export default class App extends Component {
         return (
             <BrowserRouter>
                 <Header user={this.state.user} isAuthenticated={this.state.isAuthenticated} onLogin={this.handleLogin} onLogout={this.handleLogout} />
-                <SideNav />
+                <SideNav userForum={this.state.userForum} isAuthenticated={this.state.isAuthenticated} />
                 <Switch>
                     <Route path="/" component={Home} exact />
+                    <Route path="/login" component={LoginPage} />
                 </Switch>
 
                 <ul>
@@ -76,7 +85,7 @@ export default class App extends Component {
                         <Link to="/protected">Protected Page</Link>
                     </li>
                 </ul>
-                <Route path="/login" component={LoginPage} />
+
 
                 <PrivateRoute path="/protected" component={Comment} />
             </BrowserRouter>
