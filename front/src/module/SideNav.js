@@ -8,16 +8,16 @@ export default class SideNav extends Component {
                 <Link to="/forum/create">+ create a forum</Link>
                 {this.props.isAuthenticated &&
                     <dl className="side-nav__my-forums">
-                        <dt>My forums</dt>
+                        <dt>My forums </dt>
                         {this.props.userForum &&
                             this.props.userForum.map(item => <Link to={`/forum/${item}`}>{item}</Link>)}
                     </dl>
                 }
                 <dl>
-                    <dt>Messages</dt>
+                    <dt>Messages +</dt>
                     <dd>Admin</dd>
                     <dd>Activity Feed</dd>
-                    <dd>userxyz</dd>
+                    <dd>user2</dd>
                     <dd>+ message another user</dd>
                 </dl>
             </nav>

@@ -1,6 +1,9 @@
 .side-nav {
 	display: flex;
 	flex-direction: column;
+	position: fixed;
+	top: 40px;
+	z-index: 998;
 	&__my-forums {
 		display: flex;
 		flex-direction: column;

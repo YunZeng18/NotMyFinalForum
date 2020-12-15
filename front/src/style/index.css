@@ -3,7 +3,8 @@
           box-sizing: border-box;
 }
 
-body {
+body,
+dd {
   margin: 0;
 }
 
@@ -25,6 +26,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 999;
 }
 
 .side-nav {
@@ -35,6 +40,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: fixed;
+  top: 40px;
+  z-index: 998;
 }
 
 .side-nav__my-forums {
@@ -45,6 +53,10 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.home {
+  margin: 30px 0 0 210px;
 }
 
 body {
