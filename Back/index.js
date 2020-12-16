@@ -98,3 +98,6 @@ app.listen(PORT, () => {
 
 const user = require('./routes/user');
 app.use('/user', user);
+
+const forum = require('./routes/forumRoutes');
+app.use('/forum', forum);

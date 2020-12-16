@@ -4,6 +4,10 @@
 	position: fixed;
 	top: 40px;
 	z-index: 998;
+	height: 100%;
+	background-color: $sideNav-bgc;
+	padding: 15px;
+	overflow: auto;
 	&__my-forums {
 		display: flex;
 		flex-direction: column;
