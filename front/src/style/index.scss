@@ -1,6 +1,6 @@
 @import "./partial/variable";
-@import "./partial/base";
 @import "./partial/utility";
+@import "./partial/base";
 @import "./layout/header";
 @import "./layout/sideNav";
 @import "./layout/home";
@@ -19,6 +19,7 @@ code {
 #root {
 	display: flex;
 	flex-flow: row wrap;
+	color: $primary-color;
 	.header {
 		//header
 		flex-basis: 100%;

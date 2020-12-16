@@ -5,21 +5,21 @@ export default class SideNav extends Component {
         return (
             <nav className="side-nav">
                 <Link to="/forum/list">Browse forums</Link>
-                <Link to="/forum/create">+ create a forum</Link>
+                <Link to="/forum/create">Create a forum +</Link>
+                <h2 className="side-nav__heading">My forums </h2>
                 {this.props.isAuthenticated &&
-                    <dl className="side-nav__my-forums">
-                        <dt>My forums </dt>
+                    <ul className="side-nav__my-forums">
                         {this.props.userForum &&
-                            this.props.userForum.map(item => <Link to={`/forum/${item}`}>{item}</Link>)}
-                    </dl>
+                            this.props.userForum.map(item => <li className="side-nav__link"><Link to={`/forum/${item}`}>{item}</Link></li>)}
+                    </ul>
                 }
-                <dl>
-                    <dt>Messages +</dt>
-                    <dd>Admin</dd>
-                    <dd>Activity Feed</dd>
-                    <dd>user2</dd>
-                    <dd>+ message another user</dd>
-                </dl>
+                <h2 className="side-nav__heading">Messages +</h2>
+                <ul>
+                    <li className="side-nav__link">Admin</li>
+                    <li className="side-nav__link">Activity Feed</li>
+                    <li className="side-nav__link">user2</li>
+                    <li className="side-nav__link">message another user +</li>
+                </ul>
             </nav>
         );
     }

@@ -1,8 +1,7 @@
 * {
 	box-sizing: border-box;
 }
-body,
-dd {
+body {
 	margin: 0;
 }
 h1,
@@ -16,4 +15,12 @@ p {
 }
 a {
 	text-decoration: none;
+}
+a:visited {
+	color: inherit;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
