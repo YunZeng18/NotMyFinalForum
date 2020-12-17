@@ -1,0 +1,14 @@
+.btn {
+	border-radius: 25%;
+	height: 2rem;
+	border-style: none;
+	background-color: $btn-bgc;
+	color: white;
+	&:focus {
+		outline: none;
+		background-color: $btn-bgc--dark;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}

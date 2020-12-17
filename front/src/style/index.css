@@ -1,6 +1,15 @@
-.main-margin, .home, .forum-list {
-  margin: 30px 30px 0 210px;
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap");
+.main-style, .home, .forum-list, .forum-create {
+  margin: 76px 16px 0 246px;
   padding: 20px;
+  background-color: #7179b8;
+  border-radius: 1rem;
+  border: 1px solid #7179b8;
+  width: 100%;
+}
+
+.focus-none:focus, .forum-create__text:focus, .forum-create__textarea:focus {
+  outline: none;
 }
 
 * {
@@ -36,6 +45,23 @@ ul {
   margin: 0;
 }
 
+.btn, .forum-list__btn {
+  border-radius: 25%;
+  height: 2rem;
+  border-style: none;
+  background-color: #009900;
+  color: white;
+}
+
+.btn:focus, .forum-list__btn:focus {
+  outline: none;
+  background-color: #006600;
+}
+
+.btn:hover, .forum-list__btn:hover {
+  cursor: pointer;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,9 +75,21 @@ ul {
   position: fixed;
   right: 0;
   left: 0;
-  height: 40px;
   z-index: 999;
-  background-color: #e63e34;
+  background-color: #2283d7;
+  padding: 0.5rem 1rem;
+  color: #feee2f;
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .side-nav {
@@ -63,12 +101,19 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  top: 40px;
+  top: 60px;
   z-index: 998;
   height: 100%;
   background-color: #f5a93f;
   padding: 15px;
   overflow: auto;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #7179b8;
+}
+
+.side-nav ::-webkit-scrollbar {
+  display: none;
 }
 
 .side-nav__my-forums {
@@ -83,17 +128,82 @@ ul {
 
 .side-nav__heading {
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .side-nav__link {
+  width: 100%;
+  margin-top: 0.5rem !important;
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
+.side-nav__link:hover {
+  background-color: #1e78b7;
+}
+
+.side-nav__group li {
+  margin-top: 0.5rem;
   margin-left: 1rem;
 }
 
+.side-nav__link--active {
+  background-color: #c4760a;
+}
+
+.forum-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forum-list__item__description {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.forum-list__btn {
+  margin-right: 1rem;
+}
+
+.forum-create__text-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.forum-create__text-input .label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.forum-create__textarea {
+  height: 4rem;
+}
+
+.forum-create__links {
+  margin-top: 1rem;
+}
+
+.forum-create__btn {
+  margin-left: 3rem;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "JetBrains Mono", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #bceffd;
 }
 
 code {
