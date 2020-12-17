@@ -10,8 +10,7 @@ class AuthButton extends Component {
     return (
       this.props.isAuthenticated ? (
         <p>
-          Welcome, <img height="25" src={this.props.user.photos[0].value} alt={this.props.user.displayName} />
-          {this.props.user.displayName}!{' '}
+          Welcome, {this.props.user.displayName}!{' '}
           <button onClick={this.props.onLogout}>Sign out</button>
         </p>
       ) : <button onClick={this.props.onLogin}>Log in</button>

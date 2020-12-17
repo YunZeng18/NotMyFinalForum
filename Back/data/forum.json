@@ -2,9 +2,9 @@
 	{
 		"name": "Anime",
 		"description": "Share anything about anime!",
-		"member": ["user1", "user2", "user3", "user4"],
-		"owner": "user1",
-		"moderator": ["user1", "user2", "user3"],
+		"member": ["Yun Zeng", "user2", "user3", "user4"],
+		"owner": "Yun Zeng",
+		"moderator": ["Yun Zeng", "user2", "user3"],
 		"timestamp": 1607557103579,
 		"post": [
 			{
@@ -17,14 +17,14 @@
 				"comment": [
 					{
 						"id": 0,
-						"auhtor": "user2",
+						"author": "user2",
 						"timestamp": 1607559311669,
 						"content": "finally!",
 						"vote": 0
 					},
 					{
 						"id": 1,
-						"auhtor": "user4",
+						"author": "user4",
 						"timestamp": 1607559311669,
 						"content": "finally! wooot!",
 						"vote": 0
@@ -45,7 +45,7 @@
 	{
 		"name": "Vancouver News",
 		"description": "Share the latest things happening in Vancouver!",
-		"member": ["user1", "user2", "user3", "user4"],
+		"member": ["Yun Zeng", "user2", "user3", "user4"],
 		"owner": "user2",
 		"moderator": ["user2"],
 		"timestamp": 1607557503579,
@@ -53,21 +53,21 @@
 			{
 				"title": "Chorovirus Virus cases on the rise",
 				"content": "According health authorities, more cases are coming!",
-				"author": "user1",
+				"author": "Yun Zeng",
 				"timestamp": 1607558103579,
 				"vote": 0,
 				"lock": false,
 				"comment": [
 					{
 						"id": 0,
-						"auhtor": "user2",
+						"author": "user2",
 						"timestamp": 1607559311669,
 						"content": "oh NO!",
 						"vote": 0
 					},
 					{
 						"id": 1,
-						"auhtor": "user4",
+						"author": "user4",
 						"timestamp": 1607559311669,
 						"content": "what do we do?",
 						"vote": 0
@@ -77,21 +77,21 @@
 			{
 				"title": "B.C.'s first doses of COVID-19 vaccine going to frontline health-care workers",
 				"content": "VANCOUVER -- British Columbia's first doses of Pfizer's COVID-19 vaccine will be going to certain frontline health-care workers, including those in the province's long-term care system.\\nThat's partly because of the logistical complications related to Pfizer's vaccine, which has to be kept in extreme sub-zero temperatures and can't be easily delivered directly to seniors' homes and their vulnerable residents. \\nThe Pfizer vaccine requires us to provide the vaccine at the site where it is delivered,\" provincial health officer Dr. Bonnie Henry said Wednesday. \"That will be the case for the first few weeks of this program, which means we need to bring people to the vaccine instead of the vaccine to the people at this point.",
-				"author": "user1",
+				"author": "Yun Zeng",
 				"timestamp": 1607558103579,
 				"vote": 0,
 				"lock": false,
 				"comment": [
 					{
 						"id": 0,
-						"auhtor": "user2",
+						"author": "user2",
 						"timestamp": 1607559311669,
 						"content": "that's great!",
 						"vote": 0
 					},
 					{
 						"id": 1,
-						"auhtor": "user3",
+						"author": "user3",
 						"timestamp": 1607559311669,
 						"content": "what do we do?",
 						"vote": 0
@@ -111,21 +111,21 @@
 			{
 				"title": "Chorovirus Virus cases on the rise",
 				"content": "According health authorities, more cases are coming!",
-				"author": "user1",
+				"author": "Yun Zeng",
 				"timestamp": 1607558103579,
 				"vote": 0,
 				"lock": false,
 				"comment": [
 					{
 						"id": 0,
-						"auhtor": "user2",
+						"author": "user2",
 						"timestamp": 1607559311669,
 						"content": "oh NO!",
 						"vote": 0
 					},
 					{
 						"id": 1,
-						"auhtor": "user4",
+						"author": "user4",
 						"timestamp": 1607559311669,
 						"content": "what do we do?",
 						"vote": 0
@@ -135,21 +135,21 @@
 			{
 				"title": "B.C.'s first doses of COVID-19 vaccine going to frontline health-care workers",
 				"content": "VANCOUVER -- British Columbia's first doses of Pfizer's COVID-19 vaccine will be going to certain frontline health-care workers, including those in the province's long-term care system.\\nThat's partly because of the logistical complications related to Pfizer's vaccine, which has to be kept in extreme sub-zero temperatures and can't be easily delivered directly to seniors' homes and their vulnerable residents. \\nThe Pfizer vaccine requires us to provide the vaccine at the site where it is delivered,\" provincial health officer Dr. Bonnie Henry said Wednesday. \"That will be the case for the first few weeks of this program, which means we need to bring people to the vaccine instead of the vaccine to the people at this point.",
-				"author": "user1",
+				"author": "Yun Zeng",
 				"timestamp": 1607558103579,
 				"vote": 0,
 				"lock": false,
 				"comment": [
 					{
 						"id": 0,
-						"auhtor": "user2",
+						"author": "user2",
 						"timestamp": 1607559311669,
 						"content": "that's great!",
 						"vote": 0
 					},
 					{
 						"id": 1,
-						"auhtor": "user3",
+						"author": "user3",
 						"timestamp": 1607559311669,
 						"content": "what do we do?",
 						"vote": 0

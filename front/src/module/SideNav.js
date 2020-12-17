@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 export default class SideNav extends Component {
+    handleClick = (e) => {
+        if (!this.props.isAuthenticated) {
+            e.preventDefault();
+            alert('Please login to maintain your own forum.');
+        }
+    }
     render() {
         return (
             <nav className="side-nav">
                 <NavLink className="side-nav__link" activeClassName="side-nav__link--active" to="/forum/list">Browse forums</NavLink>
-                <NavLink className="side-nav__link" activeClassName="side-nav__link--active" to="/forum/create">Create a forum +</NavLink>
+                <NavLink className="side-nav__link" activeClassName="side-nav__link--active" to="/forum/create" onClick={this.handleClick}>Create a forum +</NavLink>
                 <h2 className="side-nav__heading">My forums </h2>
                 {this.props.isAuthenticated &&
                     <ul className="side-nav__group">

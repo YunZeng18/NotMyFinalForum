@@ -8,6 +8,7 @@
 @import "./layout/home";
 @import "./layout/forumList";
 @import "./layout/forumCreate";
+@import "./layout/forumName";
 
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "JetBrains Mono", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -24,6 +25,7 @@ code {
 	display: flex;
 	flex-flow: row wrap;
 	color: $primary-color;
+
 	.header {
 		//header
 		flex-basis: 100%;

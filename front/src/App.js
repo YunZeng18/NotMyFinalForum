@@ -10,6 +10,7 @@ import SideNav from './module/SideNav';
 import Home from './module/Home';
 import ForumList from './module/forumList';
 import ForumCreate from './module/forumCreate';
+import ForumName from './module/forumName';
 
 // Authentication server URL
 export const API_URL = 'http://localhost:80';
@@ -80,6 +81,7 @@ export default class App extends Component {
                     <Route path="/login" component={LoginPage} />
                     <Route path="/forum/list" component={ForumList} />
                     <Route path="/forum/create" component={ForumCreate} />
+                    <Route path="/forum/:name" component={ForumName} />
                 </Switch>
                 <PrivateRoute path="/protected" component={Comment} />
             </BrowserRouter>
