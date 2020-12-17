@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 export default function Header(props) {
     return (
         <header className="header">
-            <Link to="/"><img src="" alt="Not My Final Forum" /></Link>
+            <Link className="header__logo" to="/">
+                <img src={props.logoSrc} alt="Not My Final Forum" />Not My Final Forum
+            </Link>
 
             <AuthButton {...props} />
         </header>
