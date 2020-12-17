@@ -5,9 +5,11 @@ import axios from 'axios';
 import LoginPage from './module/LoginPage';
 import Comment from './module/comment';
 import Header from './module/header/header';
+import logo from './asset/Icon/dragon-ball-icon.png';
 import SideNav from './module/SideNav';
 import Home from './module/Home';
 import ForumList from './module/forumList';
+import ForumCreate from './module/forumCreate';
 
 // Authentication server URL
 export const API_URL = 'http://localhost:80';
@@ -71,12 +73,13 @@ export default class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Header user={this.state.user} isAuthenticated={this.state.isAuthenticated} onLogin={this.handleLogin} onLogout={this.handleLogout} />
+                <Header logoSrc={logo} user={this.state.user} isAuthenticated={this.state.isAuthenticated} onLogin={this.handleLogin} onLogout={this.handleLogout} />
                 <SideNav userForum={this.state.userForum} isAuthenticated={this.state.isAuthenticated} />
                 <Switch>
                     <Route path="/" component={Home} exact />
                     <Route path="/login" component={LoginPage} />
                     <Route path="/forum/list" component={ForumList} />
+                    <Route path="/forum/create" component={ForumCreate} />
                 </Switch>
                 <PrivateRoute path="/protected" component={Comment} />
             </BrowserRouter>
