@@ -6,6 +6,12 @@ function list() {
     return forumList;
 }
 
+function getByName(name) {
+    const forum = JSON.parse(fs.readFileSync(forumJson));
+    return forum.filter(item => item.name === name);
+}
+
 module.exports = {
-    list
+    list,
+    getByName
 }
