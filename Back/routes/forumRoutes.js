@@ -6,4 +6,6 @@ router.get('/list', forumController.getForumList);
 
 router.get('/:name', forumController.getForumByName);
 
+router.post('/create', forumController.createForum);
+
 module.exports = router;
